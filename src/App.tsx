@@ -1,4 +1,4 @@
-import { Show, createSignal, onMount } from "solid-js";
+import { Show, createEffect, createSignal, onMount, untrack } from "solid-js";
 import logo from "./assets/logo.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
@@ -9,6 +9,7 @@ import {
   requestPermission,
   sendNotification,
 } from "@tauri-apps/plugin-notification";
+import { checkForAppUpdates } from "./uptater";
 
 function App() {
   const [system, setSystem] = createStore<
@@ -21,6 +22,8 @@ function App() {
   const [name, setName] = createSignal("");
 
   onMount(async () => {
+    await checkForAppUpdates();
+
     const plat = await platform();
     const loc = await locale();
 

@@ -21,6 +21,14 @@
       "csp": null
     }
   },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://cdn.crabnebula.app/update/the-huns/my-wksp-app/{{target}}-{{arch}}/{{current_version}}"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENDQTQzNzY5NzY1MDc0QTIKUldTaWRGQjJhVGVrekNCNDdMbm13VFBzcjBicVNEdlZERDMvQmlmNlA0cnNBZjVwbkVDOW1QOG4K"
+    }
+  },
   "bundle": {
     "macOS": {
       "signingIdentity": "-"

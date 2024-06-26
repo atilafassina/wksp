@@ -19,6 +19,13 @@
     "os:allow-locale",
     "os:allow-platform",
     "notification:default",
-    "notification:allow-is-permission-granted"
+    "notification:allow-is-permission-granted",
+    "updater:default",
+    "process:default",
+
+    "updater:allow-check",
+    "updater:allow-download-and-install",
+
+    "process:allow-restart"
   ]
 }
