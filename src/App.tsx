@@ -63,7 +63,7 @@ function App() {
     <div class="container">
       <h1>
         <Show when={system.platform}>{(p) => <>{p} - </>}</Show>
-        <Show when={system.locale}>{(l) => <>{l} - </>}</Show>
+        <Show when={system.locale}>{(l) => <>{l}</>}</Show>
       </h1>
 
       <div class="row">
